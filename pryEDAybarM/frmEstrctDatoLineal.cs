@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace pryEDAybarM
 {
-    public partial class frmColores : Form
+    public partial class frmEstrctDatoLineal : Form
     {
-        public frmColores()
+        public frmEstrctDatoLineal()
         {
             InitializeComponent();
         }
 
-        private void frmColores_Load(object sender, EventArgs e)
+        private void lblListado_Click(object sender, EventArgs e)
         {
 
         }

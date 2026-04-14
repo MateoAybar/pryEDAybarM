@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace pryEDAybarM
 {
-    public partial class frmColores : Form
+    public partial class frmMeses : Form
     {
-        public frmColores()
+        public frmMeses()
         {
             InitializeComponent();
-        }
-
-        private void frmColores_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

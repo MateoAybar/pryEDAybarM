@@ -16,5 +16,10 @@ namespace pryEDAybarM
         {
             InitializeComponent();
         }
+
+        private void frmDatosDesarrollador_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

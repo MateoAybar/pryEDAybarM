@@ -60,5 +60,29 @@ namespace pryEDAybarM
             frmClientes x = new frmClientes();  
             x.ShowDialog();
         }
+
+        private void alumnosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAlumnos x = new frmAlumnos();
+            x.ShowDialog();
+        }
+
+        private void mesesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMeses x = new frmMeses();
+            x.ShowDialog();
+        }
+
+        private void carrerasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCarreras x = new frmCarreras();
+            x.ShowDialog();
+        }
+
+        private void colaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstrctDatoLineal x = new frmEstrctDatoLineal();
+            x.ShowDialog();
+        }
     }
 }

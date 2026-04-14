@@ -100,6 +100,7 @@
             this.Name = "frmDatosDesarrollador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DatosDesarrollador";
+            this.Load += new System.EventHandler(this.frmDatosDesarrollador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
