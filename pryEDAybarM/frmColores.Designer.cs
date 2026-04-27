@@ -76,6 +76,7 @@
             this.btnGrabar.TabIndex = 4;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // frmColores
             // 

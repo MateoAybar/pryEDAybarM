@@ -31,11 +31,11 @@
             this.dgvCarreras = new System.Windows.Forms.DataGridView();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.lstCarerras = new System.Windows.Forms.ListBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCarrera = new System.Windows.Forms.Label();
+            this.lstCarreras = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarreras)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,14 +62,6 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(137, 20);
             this.txtCodigo.TabIndex = 2;
-            // 
-            // lstCarerras
-            // 
-            this.lstCarerras.FormattingEnabled = true;
-            this.lstCarerras.Location = new System.Drawing.Point(98, 113);
-            this.lstCarerras.Name = "lstCarerras";
-            this.lstCarerras.Size = new System.Drawing.Size(338, 17);
-            this.lstCarerras.TabIndex = 3;
             // 
             // txtNombre
             // 
@@ -105,21 +97,36 @@
             this.lblCarrera.TabIndex = 7;
             this.lblCarrera.Text = "Carrera:";
             // 
+            // lstCarreras
+            // 
+            this.lstCarreras.FormattingEnabled = true;
+            this.lstCarreras.Items.AddRange(new object[] {
+            "Analista",
+            "Medicina",
+            "Abogado",
+            "Economia",
+            "Inteligencia Artificial"});
+            this.lstCarreras.Location = new System.Drawing.Point(101, 117);
+            this.lstCarreras.Name = "lstCarreras";
+            this.lstCarreras.Size = new System.Drawing.Size(338, 17);
+            this.lstCarreras.TabIndex = 8;
+            // 
             // frmAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(451, 378);
+            this.Controls.Add(this.lstCarreras);
             this.Controls.Add(this.lblCarrera);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.lstCarerras);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.dgvCarreras);
             this.Name = "frmAlumnos";
-            this.Text = "frmAlumnos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Alumnos";
             this.Load += new System.EventHandler(this.frmAlumnos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarreras)).EndInit();
             this.ResumeLayout(false);
@@ -132,10 +139,10 @@
         private System.Windows.Forms.DataGridView dgvCarreras;
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.ListBox lstCarerras;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCarrera;
+        private System.Windows.Forms.ListBox lstCarreras;
     }
 }

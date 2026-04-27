@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace pryEDAybarM
 {
-    public partial class frmCarreras : Form
+    public partial class frmListaSimple : Form
     {
-        public frmCarreras()
+        public frmListaSimple()
         {
             InitializeComponent();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmListaSimple_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

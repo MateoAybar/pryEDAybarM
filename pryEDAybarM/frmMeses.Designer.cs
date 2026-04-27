@@ -88,6 +88,7 @@
             this.Controls.Add(this.txtListar);
             this.Controls.Add(this.lblNombre);
             this.Name = "frmMeses";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Meses";
             this.ResumeLayout(false);
             this.PerformLayout();

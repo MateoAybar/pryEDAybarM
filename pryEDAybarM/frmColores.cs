@@ -21,5 +21,15 @@ namespace pryEDAybarM
         {
 
         }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+            clsArchivoTexto x = new clsArchivoTexto();
+            x.NomArchi = "Colores.csv";
+            x.Grabar(txtNombre.Text);
+            x.Recorrer(lstColores);
+
+            MessageBox.Show("Dato Grabado");
+        }
     }
 }

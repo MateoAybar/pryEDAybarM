@@ -74,14 +74,20 @@ namespace pryEDAybarM
         }
 
         private void carrerasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmCarreras x = new frmCarreras();
-            x.ShowDialog();
+        { 
+        
         }
+           
 
         private void colaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEstrctDatoLineal x = new frmEstrctDatoLineal();
+            frmCola x = new frmCola();
+            x.ShowDialog();
+        }
+
+        private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPila x = new frmPila();
             x.ShowDialog();
         }
     }
