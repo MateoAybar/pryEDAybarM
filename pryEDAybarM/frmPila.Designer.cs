@@ -243,6 +243,7 @@
             this.Controls.Add(this.dvgPila);
             this.Name = "frmPila";
             this.Text = "Estructura De Datos - Pila";
+            this.Load += new System.EventHandler(this.frmPila_Load);
             this.grbEliminar.ResumeLayout(false);
             this.grbEliminar.PerformLayout();
             this.grbNuevo.ResumeLayout(false);

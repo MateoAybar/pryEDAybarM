@@ -59,5 +59,10 @@ namespace pryEDAybarM
 
             }
         }
+
+        private void frmPila_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
