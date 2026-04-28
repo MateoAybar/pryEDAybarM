@@ -36,8 +36,8 @@ namespace pryEDAybarM
                     Primero = Nuevo;
 
                 }
-                else 
-                { 
+                else
+                {
                     clsNodo aux = Primero;
                     clsNodo ant = Primero;
 
@@ -51,10 +51,45 @@ namespace pryEDAybarM
                     ant.Siguiente = Nuevo;
                 }
 
-                   
-                
+
+
             }
         }
 
+        public void Eliminar(int Codigo)
+        {
+            if (Primero != null)
+            {
+                if (Primero.Codigo == Codigo)
+                {
+                    Primero = Primero.Siguiente;
+                }
+                else
+                {
+                    clsNodo aux = Primero;
+                    clsNodo ant = Primero;
+                    while (Codigo != aux.Codigo)
+                    {
+                        ant = aux;
+                        aux = aux.Siguiente;
+                        if (aux == null) break;
+                    }
+                    if (aux != null)
+                    {
+                        ant.Siguiente = aux.Siguiente;
+                    }
+                }
+            }
+        }
+        public void Recorrer(ListBox Lista)
+        {
+            clsNodo aux = Primero;
+            Lista.Items.Clear();
+            while (aux != null)
+            {
+                Lista.Items.Add(aux.Codigo);
+                aux = aux.Siguiente;
+            }
+        }
     }
 }
