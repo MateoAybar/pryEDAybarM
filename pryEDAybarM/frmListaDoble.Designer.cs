@@ -31,7 +31,6 @@
             this.lstListaDoble = new System.Windows.Forms.ListBox();
             this.pcb1 = new System.Windows.Forms.PictureBox();
             this.grbEliminar = new System.Windows.Forms.GroupBox();
-            this.lstCodigo = new System.Windows.Forms.ListBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblCodigo2 = new System.Windows.Forms.Label();
             this.grbNuevo = new System.Windows.Forms.GroupBox();
@@ -46,6 +45,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rdbAscendentes = new System.Windows.Forms.RadioButton();
             this.rdbDescendentes = new System.Windows.Forms.RadioButton();
+            this.cmbCodigo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcb1)).BeginInit();
             this.grbEliminar.SuspendLayout();
             this.grbNuevo.SuspendLayout();
@@ -73,7 +73,7 @@
             // 
             // grbEliminar
             // 
-            this.grbEliminar.Controls.Add(this.lstCodigo);
+            this.grbEliminar.Controls.Add(this.cmbCodigo);
             this.grbEliminar.Controls.Add(this.btnEliminar);
             this.grbEliminar.Controls.Add(this.lblCodigo2);
             this.grbEliminar.Location = new System.Drawing.Point(674, 23);
@@ -82,14 +82,6 @@
             this.grbEliminar.TabIndex = 16;
             this.grbEliminar.TabStop = false;
             this.grbEliminar.Text = "Elemento A Eliminar:";
-            // 
-            // lstCodigo
-            // 
-            this.lstCodigo.FormattingEnabled = true;
-            this.lstCodigo.Location = new System.Drawing.Point(76, 34);
-            this.lstCodigo.Name = "lstCodigo";
-            this.lstCodigo.Size = new System.Drawing.Size(118, 30);
-            this.lstCodigo.TabIndex = 7;
             // 
             // btnEliminar
             // 
@@ -154,6 +146,7 @@
             this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblTramite
             // 
@@ -225,6 +218,14 @@
             this.rdbDescendentes.Text = "Descendentes";
             this.rdbDescendentes.UseVisualStyleBackColor = true;
             // 
+            // cmbCodigo
+            // 
+            this.cmbCodigo.FormattingEnabled = true;
+            this.cmbCodigo.Location = new System.Drawing.Point(55, 31);
+            this.cmbCodigo.Name = "cmbCodigo";
+            this.cmbCodigo.Size = new System.Drawing.Size(121, 21);
+            this.cmbCodigo.TabIndex = 19;
+            // 
             // frmListaDoble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -266,10 +267,10 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.DataGridView dvgListaDoble;
-        private System.Windows.Forms.ListBox lstCodigo;
         private System.Windows.Forms.Label lblCodigo2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rdbAscendentes;
         private System.Windows.Forms.RadioButton rdbDescendentes;
+        private System.Windows.Forms.ComboBox cmbCodigo;
     }
 }

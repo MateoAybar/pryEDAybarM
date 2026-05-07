@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace pryEDAybarM
 {
     public partial class frmListaDoble : Form
     {
+        clsListaDoble ListaDoble = new clsListaDoble();
         public frmListaDoble()
         {
             InitializeComponent();
@@ -36,5 +38,24 @@ namespace pryEDAybarM
         {
 
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            clsNodo nuevo = new clsNodo();
+            nuevo.Codigo = Convert.ToInt32(txtCodigo.Text);
+            nuevo.Nombre = txtNombre.Text;
+            nuevo.Tramite = txtTramite.Text;
+
+            ListaDoble.Agregar(nuevo);
+            ListaDoble.Recorrer(lstListaDoble);
+            ListaDoble.Recorrer(dvgListaDoble);
+
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = "";
+
+            cmbCodigo.Items.Add(nuevo.Codigo);
+        }
     }
+    
 }
