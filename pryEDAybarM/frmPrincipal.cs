@@ -90,5 +90,22 @@ namespace pryEDAybarM
             frmPila x = new frmPila();
             x.ShowDialog();
         }
+
+        private void estrucutraDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listaSimpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaSimple x = new frmListaSimple();    
+            x.ShowDialog();
+        }
+
+        private void listaDobleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaDoble x = new frmListaDoble();  
+            x.ShowDialog();
+        }
     }
 }

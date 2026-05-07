@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstLista = new System.Windows.Forms.ListBox();
+            this.lstListaSimple = new System.Windows.Forms.ListBox();
             this.grbEliminar = new System.Windows.Forms.GroupBox();
+            this.cmbCodigo = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblCodigo2 = new System.Windows.Forms.Label();
             this.grbNuevo = new System.Windows.Forms.GroupBox();
@@ -40,22 +41,21 @@
             this.lblTramite = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.dvgLista = new System.Windows.Forms.DataGridView();
+            this.dvgListaSimple = new System.Windows.Forms.DataGridView();
             this.pcb1 = new System.Windows.Forms.PictureBox();
-            this.cmbCodigo = new System.Windows.Forms.ComboBox();
             this.grbEliminar.SuspendLayout();
             this.grbNuevo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgLista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgListaSimple)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lstLista
+            // lstListaSimple
             // 
-            this.lstLista.FormattingEnabled = true;
-            this.lstLista.Location = new System.Drawing.Point(5, 258);
-            this.lstLista.Name = "lstLista";
-            this.lstLista.Size = new System.Drawing.Size(411, 212);
-            this.lstLista.TabIndex = 13;
+            this.lstListaSimple.FormattingEnabled = true;
+            this.lstListaSimple.Location = new System.Drawing.Point(-9, 258);
+            this.lstListaSimple.Name = "lstListaSimple";
+            this.lstListaSimple.Size = new System.Drawing.Size(411, 212);
+            this.lstListaSimple.TabIndex = 13;
             // 
             // grbEliminar
             // 
@@ -68,6 +68,15 @@
             this.grbEliminar.TabIndex = 11;
             this.grbEliminar.TabStop = false;
             this.grbEliminar.Text = "Elemento A Eliminar:";
+            // 
+            // cmbCodigo
+            // 
+            this.cmbCodigo.FormattingEnabled = true;
+            this.cmbCodigo.Location = new System.Drawing.Point(69, 140);
+            this.cmbCodigo.Name = "cmbCodigo";
+            this.cmbCodigo.Size = new System.Drawing.Size(121, 21);
+            this.cmbCodigo.TabIndex = 7;
+            this.cmbCodigo.SelectedIndexChanged += new System.EventHandler(this.cmbCodigo_SelectedIndexChanged);
             // 
             // btnEliminar
             // 
@@ -162,14 +171,14 @@
             this.lblCodigo.TabIndex = 2;
             this.lblCodigo.Text = "Codigo:";
             // 
-            // dvgLista
+            // dvgListaSimple
             // 
-            this.dvgLista.AllowUserToOrderColumns = true;
-            this.dvgLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgLista.Location = new System.Drawing.Point(433, 258);
-            this.dvgLista.Name = "dvgLista";
-            this.dvgLista.Size = new System.Drawing.Size(406, 217);
-            this.dvgLista.TabIndex = 9;
+            this.dvgListaSimple.AllowUserToOrderColumns = true;
+            this.dvgListaSimple.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgListaSimple.Location = new System.Drawing.Point(433, 258);
+            this.dvgListaSimple.Name = "dvgListaSimple";
+            this.dvgListaSimple.Size = new System.Drawing.Size(406, 217);
+            this.dvgListaSimple.TabIndex = 9;
             // 
             // pcb1
             // 
@@ -181,24 +190,16 @@
             this.pcb1.TabIndex = 12;
             this.pcb1.TabStop = false;
             // 
-            // cmbCodigo
-            // 
-            this.cmbCodigo.FormattingEnabled = true;
-            this.cmbCodigo.Location = new System.Drawing.Point(69, 140);
-            this.cmbCodigo.Name = "cmbCodigo";
-            this.cmbCodigo.Size = new System.Drawing.Size(121, 21);
-            this.cmbCodigo.TabIndex = 7;
-            // 
             // frmListaSimple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(860, 488);
-            this.Controls.Add(this.lstLista);
+            this.Controls.Add(this.lstListaSimple);
             this.Controls.Add(this.pcb1);
             this.Controls.Add(this.grbEliminar);
             this.Controls.Add(this.grbNuevo);
-            this.Controls.Add(this.dvgLista);
+            this.Controls.Add(this.dvgListaSimple);
             this.Name = "frmListaSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estrucutura De Dato Lineal - Lista Simple";
@@ -207,7 +208,7 @@
             this.grbEliminar.PerformLayout();
             this.grbNuevo.ResumeLayout(false);
             this.grbNuevo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgLista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgListaSimple)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb1)).EndInit();
             this.ResumeLayout(false);
 
@@ -215,7 +216,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox lstLista;
+        private System.Windows.Forms.ListBox lstListaSimple;
         private System.Windows.Forms.PictureBox pcb1;
         private System.Windows.Forms.GroupBox grbEliminar;
         private System.Windows.Forms.Button btnEliminar;
@@ -227,7 +228,7 @@
         private System.Windows.Forms.Label lblTramite;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.DataGridView dvgLista;
+        private System.Windows.Forms.DataGridView dvgListaSimple;
         private System.Windows.Forms.Label lblCodigo2;
         private System.Windows.Forms.ComboBox cmbCodigo;
     }

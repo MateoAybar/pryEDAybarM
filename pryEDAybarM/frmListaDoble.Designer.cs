@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstCola = new System.Windows.Forms.ListBox();
+            this.lstListaDoble = new System.Windows.Forms.ListBox();
             this.pcb1 = new System.Windows.Forms.PictureBox();
             this.grbEliminar = new System.Windows.Forms.GroupBox();
             this.lstCodigo = new System.Windows.Forms.ListBox();
@@ -42,24 +42,24 @@
             this.lblTramite = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.dvgCola = new System.Windows.Forms.DataGridView();
+            this.dvgListaDoble = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdbDescendentes = new System.Windows.Forms.RadioButton();
             this.rdbAscendentes = new System.Windows.Forms.RadioButton();
+            this.rdbDescendentes = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pcb1)).BeginInit();
             this.grbEliminar.SuspendLayout();
             this.grbNuevo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgCola)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgListaDoble)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lstCola
+            // lstListaDoble
             // 
-            this.lstCola.FormattingEnabled = true;
-            this.lstCola.Location = new System.Drawing.Point(34, 272);
-            this.lstCola.Name = "lstCola";
-            this.lstCola.Size = new System.Drawing.Size(411, 212);
-            this.lstCola.TabIndex = 18;
+            this.lstListaDoble.FormattingEnabled = true;
+            this.lstListaDoble.Location = new System.Drawing.Point(34, 272);
+            this.lstListaDoble.Name = "lstListaDoble";
+            this.lstListaDoble.Size = new System.Drawing.Size(411, 212);
+            this.lstListaDoble.TabIndex = 18;
             // 
             // pcb1
             // 
@@ -182,14 +182,14 @@
             this.lblCodigo.TabIndex = 2;
             this.lblCodigo.Text = "Codigo:";
             // 
-            // dvgCola
+            // dvgListaDoble
             // 
-            this.dvgCola.AllowUserToOrderColumns = true;
-            this.dvgCola.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgCola.Location = new System.Drawing.Point(462, 272);
-            this.dvgCola.Name = "dvgCola";
-            this.dvgCola.Size = new System.Drawing.Size(406, 217);
-            this.dvgCola.TabIndex = 14;
+            this.dvgListaDoble.AllowUserToOrderColumns = true;
+            this.dvgListaDoble.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgListaDoble.Location = new System.Drawing.Point(462, 272);
+            this.dvgListaDoble.Name = "dvgListaDoble";
+            this.dvgListaDoble.Size = new System.Drawing.Size(406, 217);
+            this.dvgListaDoble.TabIndex = 14;
             // 
             // groupBox1
             // 
@@ -203,17 +203,6 @@
             this.groupBox1.Text = "Listar Datos";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // rdbDescendentes
-            // 
-            this.rdbDescendentes.AutoSize = true;
-            this.rdbDescendentes.Location = new System.Drawing.Point(9, 30);
-            this.rdbDescendentes.Name = "rdbDescendentes";
-            this.rdbDescendentes.Size = new System.Drawing.Size(94, 17);
-            this.rdbDescendentes.TabIndex = 0;
-            this.rdbDescendentes.TabStop = true;
-            this.rdbDescendentes.Text = "Descendentes";
-            this.rdbDescendentes.UseVisualStyleBackColor = true;
-            // 
             // rdbAscendentes
             // 
             this.rdbAscendentes.AutoSize = true;
@@ -225,17 +214,28 @@
             this.rdbAscendentes.Text = "Ascendentes";
             this.rdbAscendentes.UseVisualStyleBackColor = true;
             // 
+            // rdbDescendentes
+            // 
+            this.rdbDescendentes.AutoSize = true;
+            this.rdbDescendentes.Location = new System.Drawing.Point(9, 30);
+            this.rdbDescendentes.Name = "rdbDescendentes";
+            this.rdbDescendentes.Size = new System.Drawing.Size(94, 17);
+            this.rdbDescendentes.TabIndex = 0;
+            this.rdbDescendentes.TabStop = true;
+            this.rdbDescendentes.Text = "Descendentes";
+            this.rdbDescendentes.UseVisualStyleBackColor = true;
+            // 
             // frmListaDoble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 512);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.lstCola);
+            this.Controls.Add(this.lstListaDoble);
             this.Controls.Add(this.pcb1);
             this.Controls.Add(this.grbEliminar);
             this.Controls.Add(this.grbNuevo);
-            this.Controls.Add(this.dvgCola);
+            this.Controls.Add(this.dvgListaDoble);
             this.Name = "frmListaDoble";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura - Lista Doblemente Enlazada";
@@ -244,7 +244,7 @@
             this.grbEliminar.PerformLayout();
             this.grbNuevo.ResumeLayout(false);
             this.grbNuevo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgCola)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgListaDoble)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -253,7 +253,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox lstCola;
+        private System.Windows.Forms.ListBox lstListaDoble;
         private System.Windows.Forms.PictureBox pcb1;
         private System.Windows.Forms.GroupBox grbEliminar;
         private System.Windows.Forms.Button btnEliminar;
@@ -265,7 +265,7 @@
         private System.Windows.Forms.Label lblTramite;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.DataGridView dvgCola;
+        private System.Windows.Forms.DataGridView dvgListaDoble;
         private System.Windows.Forms.ListBox lstCodigo;
         private System.Windows.Forms.Label lblCodigo2;
         private System.Windows.Forms.GroupBox groupBox1;

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
 
 namespace pryEDAybarM
 {
@@ -81,15 +83,37 @@ namespace pryEDAybarM
                 }
             }
         }
-        public void Recorrer(ListBox Lista)
+        public void Recorrer(ListBox ListaSimple)
         {
             clsNodo aux = Primero;
-            Lista.Items.Clear();
+            ListaSimple.Items.Clear();
             while (aux != null)
             {
-                Lista.Items.Add(aux.Codigo);
+                ListaSimple.Items.Add(aux.Codigo);
+                aux = aux.Siguiente;
+            }
+        }
+
+
+
+        public void Recorrer(DataGridView dvgListaSimple)
+        {
+            clsNodo aux = Primero;
+
+            if (dvgListaSimple.Columns.Count == 0)
+            {
+                dvgListaSimple.Columns.Add("Codigo", "Codigo");
+                dvgListaSimple.Columns.Add("Nombre", "Nombre");
+                dvgListaSimple.Columns.Add("Tramite", "Tramite");
+            }
+
+            dvgListaSimple.Rows.Clear();
+            while (aux != null)
+            {
+                dvgListaSimple.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
                 aux = aux.Siguiente;
             }
         }
     }
+
 }

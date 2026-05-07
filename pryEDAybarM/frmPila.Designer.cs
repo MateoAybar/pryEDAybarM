@@ -241,6 +241,7 @@
             this.Controls.Add(this.grbEliminar);
             this.Controls.Add(this.grbNuevo);
             this.Controls.Add(this.dvgPila);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmPila";
             this.Text = "Estructura De Datos - Pila";
             this.Load += new System.EventHandler(this.frmPila_Load);

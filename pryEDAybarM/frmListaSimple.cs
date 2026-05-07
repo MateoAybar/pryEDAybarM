@@ -30,7 +30,23 @@ namespace pryEDAybarM
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (cmbCodigo.SelectedItem != null)
+            {
+                int codigo = Convert.ToInt32(cmbCodigo.SelectedItem);
+                Lista.Eliminar(codigo); // Llama al método Eliminar de clsListaSimple
 
+                // Actualiza las vistas
+                Lista.Recorrer(lstListaSimple);
+                Lista.Recorrer(dvgListaSimple);
+
+                // Quita el código eliminado del ComboBox
+                cmbCodigo.Items.Remove(codigo);
+                cmbCodigo.SelectedIndex = -1;
+            }
+            else
+            {
+                MessageBox.Show("Selecciona un código para eliminar.");
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -42,12 +58,19 @@ namespace pryEDAybarM
 
             Lista.Agregar(nuevo);
            // Lista.Recorrer(dvgLista);
-            Lista.Recorrer(lstLista);
-            Lista.Recorrer();
+            Lista.Recorrer(lstListaSimple);
+            Lista.Recorrer(dvgListaSimple);
 
-            lblCodigo.Text = "";
-            lblNombre.Text = "";
-            lblTramite.Text = "";
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = "";
+
+            cmbCodigo.Items.Add(nuevo.Codigo);
+        }
+
+        private void cmbCodigo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
