@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pryEDAybarM;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -8,119 +9,202 @@ using System.Windows.Forms;
 
 namespace pryEDAybarM
 {
-
-
-    class clsListaDoble
+    internal class clsListaDoble
     {
         private clsNodo pri;
         private clsNodo ult;
-
         public clsNodo Primero
         {
             get { return pri; }
             set { pri = value; }
         }
-
         public clsNodo Ultimo
         {
             get { return ult; }
             set { ult = value; }
         }
-
         public void Agregar(clsNodo Nvo)
         {
-            if (Nvo.Codigo < Primero.Codigo)
+            if (Primero == null)
             {
-                Nvo.Siguiente = Primero;
-                Primero.Anterior = Nvo;
                 Primero = Nvo;
-            }
-            else if (Nvo.Codigo > Ultimo.Codigo)
-            {
-                Ultimo.Siguiente = Nvo;
-                Nvo.Anterior = Ultimo;
                 Ultimo = Nvo;
             }
             else
             {
-                clsNodo aux = Primero;
-                clsNodo ant = Primero;
-                while (aux.Codigo < Nvo.Codigo)
+                if (Nvo.Codigo < Primero.Codigo)
                 {
-                    ant = aux;
-                    aux = aux.Siguiente;
+                    Nvo.Siguiente = Primero;
+                    Primero.Anterior = Nvo;
+                    Primero = Nvo;
                 }
-                Nvo.Siguiente = aux;
-                Nvo.Anterior = ant;
-                ant.Siguiente = Nvo;
-                aux.Anterior = Nvo;
+                else
+                {
+                    if (Nvo.Codigo > Ultimo.Codigo)
+                    {
+                        Ultimo.Siguiente = Nvo;
+                        Nvo.Anterior = Ultimo;
+                        Ultimo = Nvo;
+                    }
+                    else
+                    {
+                        clsNodo Aux = Primero;
+                        clsNodo Ant = Primero;
+                        while (Aux.Codigo < Nvo.Codigo)
+                        {
+                            if (Nvo.Codigo < Aux.Codigo)
+                            {
+                                Ant = Aux;
+                                Aux = Aux.Siguiente;
+                            }
+                        }
+                        Ant.Siguiente = Nvo;
+                        Nvo.Siguiente = Aux;
+                        Aux.Anterior = Nvo;
+                        Nvo.Anterior = Aux;
+                    }
+                }
             }
         }
-
-
-        public void Recorrer(ListBox ListaDoble)
+        public void Eliminar(Int32 Codigo)
         {
-            clsNodo aux = Primero;
-            ListaDoble.Items.Clear();
-            while (aux != null)
+            if (Primero.Codigo == Codigo && Ultimo == Primero)
             {
-                ListaDoble.Items.Add(aux.Codigo);
-                aux = aux.Siguiente;
-            }
-
-        }
-
-
-        public void Recorrer(DataGridView dvgListaDoble)
-        {
-            clsNodo aux = Primero;
-
-            if (dvgListaDoble.Columns.Count == 0)
-            {
-                dvgListaDoble.Columns.Add("Codigo", "Codigo");
-                dvgListaDoble.Columns.Add("Nombre", "Nombre");
-                dvgListaDoble.Columns.Add("Tramite", "Tramite");
-            }
-
-            dvgListaDoble.Rows.Clear();
-            while (aux != null)
-            {
-                dvgListaDoble.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
-                aux = aux.Siguiente;
-            }
-        }
-
-
-        public void Eliminar(Int32 Cod)
-        {
-            if (Primero.Codigo == Cod)
-            {
-                Primero = Primero.Siguiente;
-                if (Primero != null) Primero.Anterior = null;
-            }
-            else if (Ultimo.Codigo == Cod)
-            {
-                Ultimo = Ultimo.Anterior;
-                if (Ultimo != null) Ultimo.Siguiente = null;
+                Primero = null;
+                Ultimo = null;
             }
             else
             {
-                clsNodo aux = Primero;
-                clsNodo ant = Primero;
-                while (aux.Codigo < Cod)
+                if (Primero.Codigo == Codigo)
                 {
-                    ant = aux;
-                    aux = aux.Siguiente;
+                    Primero = Primero.Siguiente;
+                    Primero.Anterior = null;
                 }
-                if (aux != null && aux.Codigo == Cod)
+                else
                 {
-                    ant.Siguiente = aux.Siguiente;
-                    if (aux.Siguiente != null) aux.Siguiente.Anterior = ant;
+                    if (Ultimo.Codigo == Codigo)
+                    {
+                        Ultimo = Ultimo.Anterior;
+                        Ultimo.Siguiente = null;
+                    }
+                    else
+                    {
+                        clsNodo aux = Primero;
+                        clsNodo ant = Primero;
+                        while (aux.Codigo < Codigo)
+                        {
+                            ant = aux;
+                            aux = aux.Siguiente;
+                        }
+                        aux = aux.Siguiente;
+                        aux.Anterior = ant;
+                        ant.Siguiente = aux;
+                    }
                 }
             }
+        }
 
+        public void Recorrer(DataGridView Grilla)
+        {
+            clsNodo Aux = Primero;
+            Grilla.Rows.Clear();
+            while (Aux != null)
+            {
+                Grilla.Rows.Add(Aux.Codigo, Aux.Nombre, Aux.Tramite);
+                Aux = Aux.Siguiente;
+            }
+        }
+
+        public void Recorrer(ListBox Lista)
+        {
+            clsNodo Aux = Primero;
+            Lista.Items.Clear();
+            while (Aux != null)
+            {
+                Lista.Items.Add($"Código: {Aux.Codigo}, Nombre: {Aux.Nombre}, Trámite: {Aux.Tramite}");
+                Aux = Aux.Siguiente;
+            }
+        }
+
+        public void Recorrer(ComboBox Combo)
+        {
+            clsNodo Aux = Primero;
+            Combo.Items.Clear();
+            while (Aux != null)
+            {
+                Combo.Items.Add($"Código: {Aux.Codigo}, Nombre: {Aux.Nombre}, Trámite: {Aux.Tramite}");
+                Aux = Aux.Siguiente;
+            }
+        }
+
+        public void Recorrer()
+        {
+            clsNodo Aux = Primero;
+            StreamWriter AD = new StreamWriter("ListaDoble.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            while (Aux != null)
+            {
+                AD.Write(Aux.Codigo);
+                AD.Write(";");
+                AD.Write(Aux.Nombre);
+                AD.Write(";");
+                AD.WriteLine(Aux.Tramite);
+                Aux = Aux.Siguiente;
+            }
+            AD.Close();
+        }
+
+        public void RecorrerDes(DataGridView Grilla)
+        {
+            clsNodo aux = Ultimo;
+            Grilla.Rows.Clear();
+            while (aux != null)
+            {
+                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
+                aux = aux.Anterior;
+            }
+        }
+
+        public void RecorrerDes(ListBox Lista)
+        {
+            clsNodo aux = Ultimo;
+            Lista.Items.Clear();
+            while (aux != null)
+            {
+                Lista.Items.Add($"Código: {aux.Codigo}, Nombre: {aux.Nombre}, Trámite: {aux.Tramite}");
+                aux = aux.Anterior;
+            }
+        }
+
+        public void RecorrerDes(ComboBox Combo)
+        {
+            clsNodo aux = Ultimo;
+            Combo.Items.Clear();
+            while (aux != null)
+            {
+                Combo.Items.Add($"Código: {aux.Codigo}, Nombre: {aux.Nombre}, Trámite: {aux.Tramite}");
+                aux = aux.Anterior;
+            }
+        }
+
+        public void RecorrerDes()
+        {
+            clsNodo aux = Ultimo;
+            StreamWriter AD = new StreamWriter("ListaDoble.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            while (aux != null)
+            {
+                AD.Write(aux.Codigo);
+                AD.Write(";");
+                AD.Write(aux.Nombre);
+                AD.Write(";");
+                AD.WriteLine(aux.Tramite);
+                aux = aux.Anterior;
+            }
+            AD.Close();
 
         }
     }
 }
-    

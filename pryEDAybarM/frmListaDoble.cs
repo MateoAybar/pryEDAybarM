@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pryEDAybarM;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,49 +14,103 @@ namespace pryEDAybarM
 {
     public partial class frmListaDoble : Form
     {
-        clsListaDoble ListaDoble = new clsListaDoble();
+        clsListaDoble miListaCientifica = new clsListaDoble();
         public frmListaDoble()
         {
             InitializeComponent();
         }
-
-        private void pcb1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dvgCola_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void frmListaDoble_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
+        clsListaDoble Lista = new clsListaDoble();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             clsNodo nuevo = new clsNodo();
-            nuevo.Codigo = Convert.ToInt32(txtCodigo.Text);
+
             nuevo.Nombre = txtNombre.Text;
+            nuevo.Codigo = Convert.ToInt32(txtCodigo.Text);
+            cmbListaDoble.Items.Add(nuevo.Codigo);
             nuevo.Tramite = txtTramite.Text;
 
-            ListaDoble.Agregar(nuevo);
-            ListaDoble.Recorrer(lstListaDoble);
-            ListaDoble.Recorrer(dvgListaDoble);
+            Lista.Agregar(nuevo);
+            Lista.Recorrer(dvgListaDoble);
+            Lista.Recorrer(lstListaDoble);
 
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtTramite.Clear();
+            txtCodigo.Focus();
+        }
 
-            cmbCodigo.Items.Add(nuevo.Codigo);
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            if (Lista.Primero != null)
+            {
+                Int32 codigo = Convert.ToInt32(cmbListaDoble.Text);
+                Lista.Eliminar(codigo);
+                Lista.Recorrer(dgvListaDoble);
+                Lista.Recorrer(lstListaDoble);
+                Lista.Recorrer();
+
+                cmbLista.Items.Remove(codigo);
+                cmbLista.Focus();
+                btnBorrar.Enabled = false;
+            }
+        }
+
+
+        private void rdbDescendente_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbDescendente.Checked)
+            {
+                Lista.RecorrerDes(dgvListaDoble);
+                Lista.RecorrerDes(lstListaDoble);
+            }
+            else
+            {
+                Lista.Recorrer(dgvListaDoble);
+                Lista.Recorrer(lstListaDoble);
+            }
+        }
+
+        private void cmbLista_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnBorrar.Enabled = true;
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
+
+        private void txtTramite_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
         }
     }
-    
 }
+
+
