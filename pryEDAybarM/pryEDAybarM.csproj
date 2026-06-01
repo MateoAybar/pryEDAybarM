@@ -66,6 +66,12 @@
     <Compile Include="frmArbol.Designer.cs">
       <DependentUpon>frmArbol.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBaseDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseDatos.Designer.cs">
+      <DependentUpon>frmBaseDatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,12 @@
     </Compile>
     <Compile Include="frmCola.Designer.cs">
       <DependentUpon>frmCola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultasBaseDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultasBaseDatos.Designer.cs">
+      <DependentUpon>frmConsultasBaseDatos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGrafo.cs">
       <SubType>Form</SubType>
@@ -125,6 +137,12 @@
     </Compile>
     <Compile Include="frmDatosDesarrollador.Designer.cs">
       <DependentUpon>frmDatosDesarrollador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRepasoOperacionesBaseDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRepasoOperacionesBaseDatos.Designer.cs">
+      <DependentUpon>frmRepasoOperacionesBaseDatos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

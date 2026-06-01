@@ -119,5 +119,21 @@ namespace pryEDAybarM
             frmGrafo x = new frmGrafo();
             x.ShowDialog();
         }
-    }
-}
+
+        private void consultaDeUnaTablaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultasBaseDatos x = new frmConsultasBaseDatos();
+            x.ShowDialog();
+        }
+
+        private void consultaDeBaseDeDaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaseDatos x = new frmBaseDatos();
+            x.ShowDialog();
+        }
+
+        private void repasoDeOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRepasoOperacionesBaseDatos x = new frmRepasoOperacionesBaseDatos();
+            x.ShowDialog();
+        }

@@ -58,6 +58,7 @@
             this.consultaDeUnaTablaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
             this.consultaDeBaseDeDaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.repasoDeOperacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -266,7 +267,8 @@
             this.baseDeDatosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultaDeUnaTablaToolStripMenuItem,
             this.toolStripMenuItem4,
-            this.consultaDeBaseDeDaToolStripMenuItem});
+            this.consultaDeBaseDeDaToolStripMenuItem,
+            this.repasoDeOperacionesToolStripMenuItem});
             this.baseDeDatosToolStripMenuItem.Name = "baseDeDatosToolStripMenuItem";
             this.baseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.baseDeDatosToolStripMenuItem.Text = "Base De Datos";
@@ -275,7 +277,8 @@
             // 
             this.consultaDeUnaTablaToolStripMenuItem.Name = "consultaDeUnaTablaToolStripMenuItem";
             this.consultaDeUnaTablaToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.consultaDeUnaTablaToolStripMenuItem.Text = "Consulta de una tabla...";
+            this.consultaDeUnaTablaToolStripMenuItem.Text = "Consultas SQL...";
+            this.consultaDeUnaTablaToolStripMenuItem.Click += new System.EventHandler(this.consultaDeUnaTablaToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
@@ -286,7 +289,15 @@
             // 
             this.consultaDeBaseDeDaToolStripMenuItem.Name = "consultaDeBaseDeDaToolStripMenuItem";
             this.consultaDeBaseDeDaToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.consultaDeBaseDeDaToolStripMenuItem.Text = "Consulta de base de da";
+            this.consultaDeBaseDeDaToolStripMenuItem.Text = "Operaciones...";
+            this.consultaDeBaseDeDaToolStripMenuItem.Click += new System.EventHandler(this.consultaDeBaseDeDaToolStripMenuItem_Click);
+            // 
+            // repasoDeOperacionesToolStripMenuItem
+            // 
+            this.repasoDeOperacionesToolStripMenuItem.Name = "repasoDeOperacionesToolStripMenuItem";
+            this.repasoDeOperacionesToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.repasoDeOperacionesToolStripMenuItem.Text = "Repaso de Operaciones...";
+            this.repasoDeOperacionesToolStripMenuItem.Click += new System.EventHandler(this.repasoDeOperacionesToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -337,7 +348,7 @@
         private System.Windows.Forms.ToolStripMenuItem consultaDeUnaTablaToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem consultaDeBaseDeDaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem coloresToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem repasoDeOperacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem7;
         private System.Windows.Forms.ToolStripMenuItem alumnosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carrerasToolStripMenuItem;
