@@ -38,7 +38,19 @@ namespace pryEDAybarM
             set { sig = value; }
         }
 
-        public clsNodo Anterior 
+        public clsNodo Anterior
+        {
+            get { return ant; }
+            set { ant = value; }
+        }
+
+        public clsNodo Izquierdo
+        {
+            get { return ant; }
+            set { ant = value; }
+        }
+
+        public clsNodo Derecho
         {
             get { return ant; }
             set { ant = value; }
