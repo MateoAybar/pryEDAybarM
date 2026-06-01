@@ -349,6 +349,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem consultaDeBaseDeDaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem repasoDeOperacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem coloresToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem7;
         private System.Windows.Forms.ToolStripMenuItem alumnosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem carrerasToolStripMenuItem;

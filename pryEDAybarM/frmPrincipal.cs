@@ -137,3 +137,5 @@ namespace pryEDAybarM
             frmRepasoOperacionesBaseDatos x = new frmRepasoOperacionesBaseDatos();
             x.ShowDialog();
         }
+    }
+}
