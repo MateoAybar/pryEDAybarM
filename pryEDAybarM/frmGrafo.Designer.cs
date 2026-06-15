@@ -1,4 +1,4 @@
-﻿namespace pryEDAybarM
+namespace pryEDAybarM
 {
     partial class frmGrafo
     {
@@ -57,7 +57,6 @@
             this.btnVerTodosViajes = new System.Windows.Forms.Button();
             this.dgvViajes = new System.Windows.Forms.DataGridView();
             this.lblListarViajes = new System.Windows.Forms.Label();
-            this.pnlGrafo.SuspendLayout();
             this.gbCargaDatos.SuspendLayout();
             this.gbConsultaDatos.SuspendLayout();
             this.gbListarViajes.SuspendLayout();
@@ -113,14 +112,13 @@
             this.cmbCargaOrigen.Name = "cmbCargaOrigen";
             this.cmbCargaOrigen.Size = new System.Drawing.Size(260, 21);
             this.cmbCargaOrigen.TabIndex = 1;
-            this.cmbCargaOrigen.SelectedIndex = 0;
             // 
             // lblCargaDestino
             // 
             this.lblCargaDestino.AutoSize = true;
             this.lblCargaDestino.Location = new System.Drawing.Point(15, 50);
             this.lblCargaDestino.Name = "lblCargaDestino";
-            this.lblCargaDestino.Size = new System.Drawing.Size(49, 13);
+            this.lblCargaDestino.Size = new System.Drawing.Size(46, 13);
             this.lblCargaDestino.TabIndex = 2;
             this.lblCargaDestino.Text = "Destino:";
             // 
@@ -137,7 +135,6 @@
             this.cmbCargaDestino.Name = "cmbCargaDestino";
             this.cmbCargaDestino.Size = new System.Drawing.Size(260, 21);
             this.cmbCargaDestino.TabIndex = 3;
-            this.cmbCargaDestino.SelectedIndex = 0;
             // 
             // lblCargaPrecio
             // 
@@ -214,14 +211,13 @@
             this.cmbConsultaOrigen.Name = "cmbConsultaOrigen";
             this.cmbConsultaOrigen.Size = new System.Drawing.Size(260, 21);
             this.cmbConsultaOrigen.TabIndex = 1;
-            this.cmbConsultaOrigen.SelectedIndex = 0;
             // 
             // lblConsultaDestino
             // 
             this.lblConsultaDestino.AutoSize = true;
             this.lblConsultaDestino.Location = new System.Drawing.Point(15, 50);
             this.lblConsultaDestino.Name = "lblConsultaDestino";
-            this.lblConsultaDestino.Size = new System.Drawing.Size(49, 13);
+            this.lblConsultaDestino.Size = new System.Drawing.Size(46, 13);
             this.lblConsultaDestino.TabIndex = 2;
             this.lblConsultaDestino.Text = "Destino:";
             // 
@@ -238,7 +234,6 @@
             this.cmbConsultaDestino.Name = "cmbConsultaDestino";
             this.cmbConsultaDestino.Size = new System.Drawing.Size(260, 21);
             this.cmbConsultaDestino.TabIndex = 3;
-            this.cmbConsultaDestino.SelectedIndex = 0;
             // 
             // lblConsultaPrecio
             // 
@@ -315,7 +310,6 @@
             this.cmbListarDesde.Name = "cmbListarDesde";
             this.cmbListarDesde.Size = new System.Drawing.Size(120, 21);
             this.cmbListarDesde.TabIndex = 1;
-            this.cmbListarDesde.SelectedIndex = 0;
             // 
             // btnListarDestinos
             // 
@@ -332,7 +326,7 @@
             this.lblListarHasta.AutoSize = true;
             this.lblListarHasta.Location = new System.Drawing.Point(312, 20);
             this.lblListarHasta.Name = "lblListarHasta";
-            this.lblListarHasta.Size = new System.Drawing.Size(35, 13);
+            this.lblListarHasta.Size = new System.Drawing.Size(38, 13);
             this.lblListarHasta.TabIndex = 3;
             this.lblListarHasta.Text = "Hasta:";
             // 
@@ -349,7 +343,6 @@
             this.cmbListarHasta.Name = "cmbListarHasta";
             this.cmbListarHasta.Size = new System.Drawing.Size(120, 21);
             this.cmbListarHasta.TabIndex = 4;
-            this.cmbListarHasta.SelectedIndex = 0;
             // 
             // btnListarOrigenes
             // 
@@ -398,9 +391,10 @@
             this.Controls.Add(this.gbConsultaDatos);
             this.Controls.Add(this.gbCargaDatos);
             this.Controls.Add(this.pnlGrafo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmGrafo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Operaciones en un Grafo";
-            this.pnlGrafo.ResumeLayout(false);
             this.gbCargaDatos.ResumeLayout(false);
             this.gbCargaDatos.PerformLayout();
             this.gbConsultaDatos.ResumeLayout(false);

@@ -1,4 +1,4 @@
-﻿namespace pryEDAybarM
+namespace pryEDAybarM
 {
     partial class frmListaDoble
     {
@@ -236,6 +236,7 @@
             this.Controls.Add(this.grbEliminar);
             this.Controls.Add(this.grbNuevo);
             this.Controls.Add(this.dvgListaDoble);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmListaDoble";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura - Lista Doblemente Enlazada";

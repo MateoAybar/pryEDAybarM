@@ -1,4 +1,4 @@
-﻿namespace pryEDAybarM
+namespace pryEDAybarM
 {
     partial class frmMeses
     {
@@ -87,6 +87,7 @@
             this.Controls.Add(this.lstMeses);
             this.Controls.Add(this.txtListar);
             this.Controls.Add(this.lblNombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmMeses";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Meses";

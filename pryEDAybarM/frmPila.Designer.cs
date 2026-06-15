@@ -1,4 +1,4 @@
-﻿namespace pryEDAybarM
+namespace pryEDAybarM
 {
     partial class frmPila
     {
@@ -241,8 +241,9 @@
             this.Controls.Add(this.grbEliminar);
             this.Controls.Add(this.grbNuevo);
             this.Controls.Add(this.dvgPila);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmPila";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura De Datos - Pila";
             this.Load += new System.EventHandler(this.frmPila_Load);
             this.grbEliminar.ResumeLayout(false);

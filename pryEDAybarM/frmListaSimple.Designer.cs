@@ -1,4 +1,4 @@
-﻿namespace pryEDAybarM
+namespace pryEDAybarM
 {
     partial class frmListaSimple
     {
@@ -200,6 +200,7 @@
             this.Controls.Add(this.grbEliminar);
             this.Controls.Add(this.grbNuevo);
             this.Controls.Add(this.dvgListaSimple);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmListaSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estrucutura De Dato Lineal - Lista Simple";

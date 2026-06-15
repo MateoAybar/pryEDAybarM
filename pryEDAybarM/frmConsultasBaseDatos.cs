@@ -25,8 +25,8 @@ namespace pryEDAybarM
                 return;
             }
 
-            // Aquí se ejecutará la consulta SQL
-            MessageBox.Show("Consulta ejecutada: " + txtConsultaSQL.Text);
+            clsConexion objConexion = new clsConexion();
+            objConexion.Listar(dgvResultados, txtConsultaSQL.Text);
         }
     }
 }

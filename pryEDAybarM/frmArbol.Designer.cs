@@ -1,4 +1,4 @@
-﻿namespace pryEDAybarM
+namespace pryEDAybarM
 {
     partial class frmArbol
     {
@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             this.grbListado = new System.Windows.Forms.GroupBox();
+            this.rdbpPostorden = new System.Windows.Forms.RadioButton();
             this.rdbpreorden = new System.Windows.Forms.RadioButton();
             this.rdbInorden = new System.Windows.Forms.RadioButton();
+            this.dvgArbol = new System.Windows.Forms.DataGridView();
             this.grbEliminar = new System.Windows.Forms.GroupBox();
+            this.cmbCodigo = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblCodigo2 = new System.Windows.Forms.Label();
             this.grbNuevo = new System.Windows.Forms.GroupBox();
@@ -42,15 +45,12 @@
             this.lblTramite = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.dvgArbol = new System.Windows.Forms.DataGridView();
-            this.cmbCodigo = new System.Windows.Forms.ComboBox();
             this.btnEquilibrar = new System.Windows.Forms.Button();
-            this.rdbpPostorden = new System.Windows.Forms.RadioButton();
             this.trvArbol = new System.Windows.Forms.TreeView();
             this.grbListado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgArbol)).BeginInit();
             this.grbEliminar.SuspendLayout();
             this.grbNuevo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgArbol)).BeginInit();
             this.SuspendLayout();
             // 
             // grbListado
@@ -65,6 +65,17 @@
             this.grbListado.TabIndex = 22;
             this.grbListado.TabStop = false;
             this.grbListado.Text = "Listado del Árbol";
+            // 
+            // rdbpPostorden
+            // 
+            this.rdbpPostorden.AutoSize = true;
+            this.rdbpPostorden.Location = new System.Drawing.Point(37, 163);
+            this.rdbpPostorden.Name = "rdbpPostorden";
+            this.rdbpPostorden.Size = new System.Drawing.Size(78, 17);
+            this.rdbpPostorden.TabIndex = 2;
+            this.rdbpPostorden.TabStop = true;
+            this.rdbpPostorden.Text = "Post-Orden";
+            this.rdbpPostorden.UseVisualStyleBackColor = true;
             // 
             // rdbpreorden
             // 
@@ -88,6 +99,15 @@
             this.rdbInorden.Text = "In-Orden";
             this.rdbInorden.UseVisualStyleBackColor = true;
             // 
+            // dvgArbol
+            // 
+            this.dvgArbol.AllowUserToOrderColumns = true;
+            this.dvgArbol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgArbol.Location = new System.Drawing.Point(241, 19);
+            this.dvgArbol.Name = "dvgArbol";
+            this.dvgArbol.Size = new System.Drawing.Size(393, 185);
+            this.dvgArbol.TabIndex = 19;
+            // 
             // grbEliminar
             // 
             this.grbEliminar.Controls.Add(this.cmbCodigo);
@@ -99,6 +119,14 @@
             this.grbEliminar.TabIndex = 21;
             this.grbEliminar.TabStop = false;
             this.grbEliminar.Text = "Elemento A Eliminar:";
+            // 
+            // cmbCodigo
+            // 
+            this.cmbCodigo.FormattingEnabled = true;
+            this.cmbCodigo.Location = new System.Drawing.Point(73, 31);
+            this.cmbCodigo.Name = "cmbCodigo";
+            this.cmbCodigo.Size = new System.Drawing.Size(121, 21);
+            this.cmbCodigo.TabIndex = 7;
             // 
             // btnEliminar
             // 
@@ -191,23 +219,6 @@
             this.lblCodigo.TabIndex = 2;
             this.lblCodigo.Text = "Codigo:";
             // 
-            // dvgArbol
-            // 
-            this.dvgArbol.AllowUserToOrderColumns = true;
-            this.dvgArbol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgArbol.Location = new System.Drawing.Point(241, 19);
-            this.dvgArbol.Name = "dvgArbol";
-            this.dvgArbol.Size = new System.Drawing.Size(393, 185);
-            this.dvgArbol.TabIndex = 19;
-            // 
-            // cmbCodigo
-            // 
-            this.cmbCodigo.FormattingEnabled = true;
-            this.cmbCodigo.Location = new System.Drawing.Point(73, 31);
-            this.cmbCodigo.Name = "cmbCodigo";
-            this.cmbCodigo.Size = new System.Drawing.Size(121, 21);
-            this.cmbCodigo.TabIndex = 7;
-            // 
             // btnEquilibrar
             // 
             this.btnEquilibrar.Location = new System.Drawing.Point(468, 198);
@@ -216,17 +227,6 @@
             this.btnEquilibrar.TabIndex = 8;
             this.btnEquilibrar.Text = "Equilibrar";
             this.btnEquilibrar.UseVisualStyleBackColor = true;
-            // 
-            // rdbpPostorden
-            // 
-            this.rdbpPostorden.AutoSize = true;
-            this.rdbpPostorden.Location = new System.Drawing.Point(37, 163);
-            this.rdbpPostorden.Name = "rdbpPostorden";
-            this.rdbpPostorden.Size = new System.Drawing.Size(78, 17);
-            this.rdbpPostorden.TabIndex = 2;
-            this.rdbpPostorden.TabStop = true;
-            this.rdbpPostorden.Text = "Post-Orden";
-            this.rdbpPostorden.UseVisualStyleBackColor = true;
             // 
             // trvArbol
             // 
@@ -245,15 +245,17 @@
             this.Controls.Add(this.grbListado);
             this.Controls.Add(this.grbEliminar);
             this.Controls.Add(this.grbNuevo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmArbol";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructura Ramificada - Arbol";
             this.grbListado.ResumeLayout(false);
             this.grbListado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgArbol)).EndInit();
             this.grbEliminar.ResumeLayout(false);
             this.grbEliminar.PerformLayout();
             this.grbNuevo.ResumeLayout(false);
             this.grbNuevo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgArbol)).EndInit();
             this.ResumeLayout(false);
 
         }

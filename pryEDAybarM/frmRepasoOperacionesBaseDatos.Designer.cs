@@ -41,7 +41,7 @@ namespace pryEDAybarM
             this.lblOperacion.AutoSize = true;
             this.lblOperacion.Location = new System.Drawing.Point(12, 9);
             this.lblOperacion.Name = "lblOperacion";
-            this.lblOperacion.Size = new System.Drawing.Size(195, 13);
+            this.lblOperacion.Size = new System.Drawing.Size(200, 13);
             this.lblOperacion.TabIndex = 0;
             this.lblOperacion.Text = "Operación a realizar en la base de datos:";
             // 
@@ -89,7 +89,9 @@ namespace pryEDAybarM
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.cmbOperaciones);
             this.Controls.Add(this.lblOperacion);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmRepasoOperacionesBaseDatos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Repaso de Operaciones de Base de Datos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).EndInit();
             this.ResumeLayout(false);

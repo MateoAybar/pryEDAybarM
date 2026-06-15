@@ -41,7 +41,7 @@ namespace pryEDAybarM
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(12, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(142, 24);
+            this.lblTitulo.Size = new System.Drawing.Size(173, 24);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Consulta en SQL:";
             // 
@@ -80,7 +80,9 @@ namespace pryEDAybarM
             this.Controls.Add(this.dgvResultados);
             this.Controls.Add(this.txtConsultaSQL);
             this.Controls.Add(this.lblTitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmConsultasBaseDatos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultas en la Base de Datos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).EndInit();
             this.ResumeLayout(false);

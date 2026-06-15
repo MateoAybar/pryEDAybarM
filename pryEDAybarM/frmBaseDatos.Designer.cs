@@ -30,17 +30,17 @@ namespace pryEDAybarM
         {
             this.dgvResultados = new System.Windows.Forms.DataGridView();
             this.gbProyeccion = new System.Windows.Forms.GroupBox();
-            this.btnProyeccionSimple = new System.Windows.Forms.Button();
-            this.btnProyeccionMultiatributo = new System.Windows.Forms.Button();
             this.btnJuntar = new System.Windows.Forms.Button();
+            this.btnProyeccionMultiatributo = new System.Windows.Forms.Button();
+            this.btnProyeccionSimple = new System.Windows.Forms.Button();
             this.gbSeleccion = new System.Windows.Forms.GroupBox();
-            this.btnSeleccionSimple = new System.Windows.Forms.Button();
-            this.btnSeleccionMultiatributo = new System.Windows.Forms.Button();
             this.btnSeleccionConvolucion = new System.Windows.Forms.Button();
+            this.btnSeleccionMultiatributo = new System.Windows.Forms.Button();
+            this.btnSeleccionSimple = new System.Windows.Forms.Button();
             this.gbOperacionesAlgebraicas = new System.Windows.Forms.GroupBox();
-            this.btnUnion = new System.Windows.Forms.Button();
-            this.btnInterseccion = new System.Windows.Forms.Button();
             this.btnDiferencia = new System.Windows.Forms.Button();
+            this.btnInterseccion = new System.Windows.Forms.Button();
+            this.btnUnion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).BeginInit();
             this.gbProyeccion.SuspendLayout();
             this.gbSeleccion.SuspendLayout();
@@ -67,15 +67,15 @@ namespace pryEDAybarM
             this.gbProyeccion.TabStop = false;
             this.gbProyeccion.Text = "Operaciones de Proyección - SELECT";
             // 
-            // btnProyeccionSimple
+            // btnJuntar
             // 
-            this.btnProyeccionSimple.Location = new System.Drawing.Point(10, 25);
-            this.btnProyeccionSimple.Name = "btnProyeccionSimple";
-            this.btnProyeccionSimple.Size = new System.Drawing.Size(310, 30);
-            this.btnProyeccionSimple.TabIndex = 0;
-            this.btnProyeccionSimple.Text = "Proyección simple";
-            this.btnProyeccionSimple.UseVisualStyleBackColor = true;
-            this.btnProyeccionSimple.Click += new System.EventHandler(this.btnProyeccionSimple_Click);
+            this.btnJuntar.Location = new System.Drawing.Point(10, 95);
+            this.btnJuntar.Name = "btnJuntar";
+            this.btnJuntar.Size = new System.Drawing.Size(310, 30);
+            this.btnJuntar.TabIndex = 2;
+            this.btnJuntar.Text = "Juntar";
+            this.btnJuntar.UseVisualStyleBackColor = true;
+            this.btnJuntar.Click += new System.EventHandler(this.btnJuntar_Click);
             // 
             // btnProyeccionMultiatributo
             // 
@@ -87,15 +87,15 @@ namespace pryEDAybarM
             this.btnProyeccionMultiatributo.UseVisualStyleBackColor = true;
             this.btnProyeccionMultiatributo.Click += new System.EventHandler(this.btnProyeccionMultiatributo_Click);
             // 
-            // btnJuntar
+            // btnProyeccionSimple
             // 
-            this.btnJuntar.Location = new System.Drawing.Point(10, 95);
-            this.btnJuntar.Name = "btnJuntar";
-            this.btnJuntar.Size = new System.Drawing.Size(310, 30);
-            this.btnJuntar.TabIndex = 2;
-            this.btnJuntar.Text = "Juntar";
-            this.btnJuntar.UseVisualStyleBackColor = true;
-            this.btnJuntar.Click += new System.EventHandler(this.btnJuntar_Click);
+            this.btnProyeccionSimple.Location = new System.Drawing.Point(10, 25);
+            this.btnProyeccionSimple.Name = "btnProyeccionSimple";
+            this.btnProyeccionSimple.Size = new System.Drawing.Size(310, 30);
+            this.btnProyeccionSimple.TabIndex = 0;
+            this.btnProyeccionSimple.Text = "Proyección simple";
+            this.btnProyeccionSimple.UseVisualStyleBackColor = true;
+            this.btnProyeccionSimple.Click += new System.EventHandler(this.btnProyeccionSimple_Click);
             // 
             // gbSeleccion
             // 
@@ -109,15 +109,15 @@ namespace pryEDAybarM
             this.gbSeleccion.TabStop = false;
             this.gbSeleccion.Text = "Operaciones de Selección - WHERE";
             // 
-            // btnSeleccionSimple
+            // btnSeleccionConvolucion
             // 
-            this.btnSeleccionSimple.Location = new System.Drawing.Point(10, 25);
-            this.btnSeleccionSimple.Name = "btnSeleccionSimple";
-            this.btnSeleccionSimple.Size = new System.Drawing.Size(310, 30);
-            this.btnSeleccionSimple.TabIndex = 0;
-            this.btnSeleccionSimple.Text = "Selección simple";
-            this.btnSeleccionSimple.UseVisualStyleBackColor = true;
-            this.btnSeleccionSimple.Click += new System.EventHandler(this.btnSeleccionSimple_Click);
+            this.btnSeleccionConvolucion.Location = new System.Drawing.Point(10, 95);
+            this.btnSeleccionConvolucion.Name = "btnSeleccionConvolucion";
+            this.btnSeleccionConvolucion.Size = new System.Drawing.Size(310, 30);
+            this.btnSeleccionConvolucion.TabIndex = 2;
+            this.btnSeleccionConvolucion.Text = "Selección por convolución";
+            this.btnSeleccionConvolucion.UseVisualStyleBackColor = true;
+            this.btnSeleccionConvolucion.Click += new System.EventHandler(this.btnSeleccionConvolucion_Click);
             // 
             // btnSeleccionMultiatributo
             // 
@@ -129,15 +129,15 @@ namespace pryEDAybarM
             this.btnSeleccionMultiatributo.UseVisualStyleBackColor = true;
             this.btnSeleccionMultiatributo.Click += new System.EventHandler(this.btnSeleccionMultiatributo_Click);
             // 
-            // btnSeleccionConvolucion
+            // btnSeleccionSimple
             // 
-            this.btnSeleccionConvolucion.Location = new System.Drawing.Point(10, 95);
-            this.btnSeleccionConvolucion.Name = "btnSeleccionConvolucion";
-            this.btnSeleccionConvolucion.Size = new System.Drawing.Size(310, 30);
-            this.btnSeleccionConvolucion.TabIndex = 2;
-            this.btnSeleccionConvolucion.Text = "Selección por convolución";
-            this.btnSeleccionConvolucion.UseVisualStyleBackColor = true;
-            this.btnSeleccionConvolucion.Click += new System.EventHandler(this.btnSeleccionConvolucion_Click);
+            this.btnSeleccionSimple.Location = new System.Drawing.Point(10, 25);
+            this.btnSeleccionSimple.Name = "btnSeleccionSimple";
+            this.btnSeleccionSimple.Size = new System.Drawing.Size(310, 30);
+            this.btnSeleccionSimple.TabIndex = 0;
+            this.btnSeleccionSimple.Text = "Selección simple";
+            this.btnSeleccionSimple.UseVisualStyleBackColor = true;
+            this.btnSeleccionSimple.Click += new System.EventHandler(this.btnSeleccionSimple_Click);
             // 
             // gbOperacionesAlgebraicas
             // 
@@ -151,15 +151,15 @@ namespace pryEDAybarM
             this.gbOperacionesAlgebraicas.TabStop = false;
             this.gbOperacionesAlgebraicas.Text = "Operaciones Algebraicas";
             // 
-            // btnUnion
+            // btnDiferencia
             // 
-            this.btnUnion.Location = new System.Drawing.Point(10, 25);
-            this.btnUnion.Name = "btnUnion";
-            this.btnUnion.Size = new System.Drawing.Size(328, 30);
-            this.btnUnion.TabIndex = 0;
-            this.btnUnion.Text = "Unión";
-            this.btnUnion.UseVisualStyleBackColor = true;
-            this.btnUnion.Click += new System.EventHandler(this.btnUnion_Click);
+            this.btnDiferencia.Location = new System.Drawing.Point(10, 95);
+            this.btnDiferencia.Name = "btnDiferencia";
+            this.btnDiferencia.Size = new System.Drawing.Size(328, 30);
+            this.btnDiferencia.TabIndex = 2;
+            this.btnDiferencia.Text = "Diferencia";
+            this.btnDiferencia.UseVisualStyleBackColor = true;
+            this.btnDiferencia.Click += new System.EventHandler(this.btnDiferencia_Click);
             // 
             // btnInterseccion
             // 
@@ -171,15 +171,15 @@ namespace pryEDAybarM
             this.btnInterseccion.UseVisualStyleBackColor = true;
             this.btnInterseccion.Click += new System.EventHandler(this.btnInterseccion_Click);
             // 
-            // btnDiferencia
+            // btnUnion
             // 
-            this.btnDiferencia.Location = new System.Drawing.Point(10, 95);
-            this.btnDiferencia.Name = "btnDiferencia";
-            this.btnDiferencia.Size = new System.Drawing.Size(328, 30);
-            this.btnDiferencia.TabIndex = 2;
-            this.btnDiferencia.Text = "Diferencia";
-            this.btnDiferencia.UseVisualStyleBackColor = true;
-            this.btnDiferencia.Click += new System.EventHandler(this.btnDiferencia_Click);
+            this.btnUnion.Location = new System.Drawing.Point(10, 25);
+            this.btnUnion.Name = "btnUnion";
+            this.btnUnion.Size = new System.Drawing.Size(328, 30);
+            this.btnUnion.TabIndex = 0;
+            this.btnUnion.Text = "Unión";
+            this.btnUnion.UseVisualStyleBackColor = true;
+            this.btnUnion.Click += new System.EventHandler(this.btnUnion_Click);
             // 
             // frmBaseDatos
             // 
@@ -190,7 +190,9 @@ namespace pryEDAybarM
             this.Controls.Add(this.gbSeleccion);
             this.Controls.Add(this.gbProyeccion);
             this.Controls.Add(this.dgvResultados);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmBaseDatos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Base de Datos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).EndInit();
             this.gbProyeccion.ResumeLayout(false);

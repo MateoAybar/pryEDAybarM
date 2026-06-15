@@ -1,4 +1,4 @@
-﻿namespace pryEDAybarM
+namespace pryEDAybarM
 {
     partial class frmAlumnos
     {
@@ -124,6 +124,7 @@
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.dgvCarreras);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmAlumnos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alumnos";
