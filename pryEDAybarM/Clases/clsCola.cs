@@ -56,14 +56,11 @@ namespace pryEDAybarM
                 Primero = Primero.Siguiente;
             }
 
-
         }
 
         public void Recorrer(DataGridView Grilla) 
         {
             clsNodo aux = Primero;
-            // Asegurar que existan columnas antes de añadir filas. Si no hay columnas,
-            // Rows.Add(...) lanza InvalidOperationException.
             if (Grilla.Columns.Count == 0)
             {
                 Grilla.Columns.Add("Codigo", "Codigo");
@@ -120,10 +117,6 @@ namespace pryEDAybarM
             }
             AD.Close(); 
         }
-
-
-
-
 
     }
 }

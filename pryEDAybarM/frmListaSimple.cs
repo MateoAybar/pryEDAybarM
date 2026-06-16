@@ -33,13 +33,11 @@ namespace pryEDAybarM
             if (cmbCodigo.SelectedItem != null)
             {
                 int codigo = Convert.ToInt32(cmbCodigo.SelectedItem);
-                Lista.Eliminar(codigo); // Llama al método Eliminar de clsListaSimple
+                Lista.Eliminar(codigo);
 
-                // Actualiza las vistas
                 Lista.Recorrer(lstListaSimple);
                 Lista.Recorrer(dvgListaSimple);
 
-                // Quita el código eliminado del ComboBox
                 cmbCodigo.Items.Remove(codigo);
                 cmbCodigo.SelectedIndex = -1;
             }
@@ -57,7 +55,6 @@ namespace pryEDAybarM
             nuevo.Tramite = txtTramite.Text;
 
             Lista.Agregar(nuevo);
-           // Lista.Recorrer(dvgLista);
             Lista.Recorrer(lstListaSimple);
             Lista.Recorrer(dvgListaSimple);
 

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,14 +19,15 @@ namespace pryEDAybarM
 
         private void btnListar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtConsultaSQL.Text))
+            string sql = txtConsultaSQL.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(sql))
             {
-                MessageBox.Show("Por favor ingrese una consulta SQL");
+                MessageBox.Show("Por favor ingrese una consulta SQL.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            clsConexion objConexion = new clsConexion();
-            objConexion.Listar(dgvResultados, txtConsultaSQL.Text);
+            new clsConexion().Listar(dgvResultados, sql);
         }
     }
 }

@@ -8,14 +8,12 @@ using System.Windows.Forms;
 using System.Text;
 using System.Windows.Forms;
 
-
 namespace pryEDAybarM
 {
     internal class clsPila
     {
 
         private clsNodo pri;
-
 
         public clsNodo Primero 
         { 

@@ -9,7 +9,6 @@ using System.Windows.Forms;
 namespace pryEDAybarM
 {
 
-
     class clsListaDoble
     {
         private clsNodo pri;
@@ -57,7 +56,6 @@ namespace pryEDAybarM
             }
         }
 
-
         public void Recorrer(ListBox ListaDoble)
         {
             clsNodo aux = Primero;
@@ -69,7 +67,6 @@ namespace pryEDAybarM
             }
 
         }
-
 
         public void Recorrer(DataGridView dvgListaDoble)
         {
@@ -89,7 +86,6 @@ namespace pryEDAybarM
                 aux = aux.Siguiente;
             }
         }
-
 
         public void Eliminar(Int32 Cod)
         {
@@ -118,7 +114,6 @@ namespace pryEDAybarM
                     if (aux.Siguiente != null) aux.Siguiente.Anterior = ant;
                 }
             }
-
 
         }
     }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Data;
 using System.Data.OleDb;
 using System.IO;
@@ -12,7 +12,7 @@ namespace pryEDAybarM
         {
             get
             {
-                string ruta = Path.Combine(Application.StartupPath, "Base De Datos", "Libreria.mdb");
+                string ruta = Path.Combine(Application.StartupPath, "Base De Datos", "Libreria.accdb");
                 return @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + ruta;
             }
         }

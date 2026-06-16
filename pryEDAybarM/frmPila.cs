@@ -26,7 +26,6 @@ namespace pryEDAybarM
             nuevo.Nombre = txtNombre.Text;
             nuevo.Tramite = txtTramite.Text;
 
-
             Pila.Agregar(nuevo);
             Pila.Recorrer(dvgPila);
             Pila.Recorrer(lstPila);
@@ -35,7 +34,6 @@ namespace pryEDAybarM
             lblCodigoM.Text = "";
             lblNombreM.Text = "";
             lblTramiteM.Text = "";
-
 
         }
 

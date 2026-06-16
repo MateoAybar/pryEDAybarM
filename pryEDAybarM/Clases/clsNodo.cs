@@ -13,6 +13,8 @@ namespace pryEDAybarM
         private String tra;
         private clsNodo sig;
         private clsNodo ant;
+        private clsNodo izq;
+        private clsNodo der;
 
         public Int32 Codigo
         {
@@ -46,14 +48,14 @@ namespace pryEDAybarM
 
         public clsNodo Izquierdo
         {
-            get { return ant; }
-            set { ant = value; }
+            get { return izq; }
+            set { izq = value; }
         }
 
         public clsNodo Derecho
         {
-            get { return ant; }
-            set { ant = value; }
+            get { return der; }
+            set { der = value; }
         }
     }
 }

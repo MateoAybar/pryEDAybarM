@@ -27,14 +27,10 @@ namespace pryEDAybarM
 
         }
 
-
         clsCola fila = new clsCola();
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
-
-
 
             clsNodo n = new clsNodo();
             n.Nombre = (txtNombre.Text);
@@ -58,9 +54,7 @@ namespace pryEDAybarM
             txtNombre.Text = "";
             txtTramite.Text = "";
 
-
         }
-
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -81,7 +75,6 @@ namespace pryEDAybarM
                 lblTramiteM.Text = "";
                 MessageBox.Show("La fila esta vacia");
             }
-
 
         }
 

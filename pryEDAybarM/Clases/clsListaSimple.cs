@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-
 namespace pryEDAybarM
 {
-
-
 
     internal class clsListaSimple
     {
@@ -53,8 +50,6 @@ namespace pryEDAybarM
                     ant.Siguiente = Nuevo;
                 }
 
-
-
             }
         }
 
@@ -93,8 +88,6 @@ namespace pryEDAybarM
                 aux = aux.Siguiente;
             }
         }
-
-
 
         public void Recorrer(DataGridView dvgListaSimple)
         {

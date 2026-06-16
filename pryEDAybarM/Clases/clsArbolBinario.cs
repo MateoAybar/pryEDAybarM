@@ -66,7 +66,6 @@ namespace pryEDAybarM
             if (R.Derecho != null) PreOrden(R.Derecho, NodoPadre);
         }
 
-        
         public void Recorrer(ComboBox cmb)
         {
             cmb.Items.Clear();
@@ -81,7 +80,6 @@ namespace pryEDAybarM
             if (R.Derecho != null) InOrdenComboBox(cmb, R.Derecho);
         }
 
-        
         public int[] RecorridoInOrdenVector()
         {
             List<int> lista = new List<int>();
@@ -97,7 +95,6 @@ namespace pryEDAybarM
             if (R.Derecho != null) InOrdenVector(R.Derecho, lista);
         }
 
-
         public void RecorridoPreOrden(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
@@ -112,7 +109,6 @@ namespace pryEDAybarM
             if (R.Derecho != null) PreOrdenGrilla(Dvg, R.Derecho);
         }
 
-        
         public void RecorridoPostOrden(DataGridView Grilla)
         {
             Grilla.Rows.Clear();

@@ -78,7 +78,6 @@ namespace pryEDAybarM
         
         }
            
-
         private void colaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCola x = new frmCola();

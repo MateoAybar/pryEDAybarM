@@ -31,7 +31,6 @@ namespace pryEDAybarM
             this.lstListaDoble = new System.Windows.Forms.ListBox();
             this.pcb1 = new System.Windows.Forms.PictureBox();
             this.grbEliminar = new System.Windows.Forms.GroupBox();
-            this.lstCodigo = new System.Windows.Forms.ListBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblCodigo2 = new System.Windows.Forms.Label();
             this.grbNuevo = new System.Windows.Forms.GroupBox();
@@ -43,14 +42,15 @@ namespace pryEDAybarM
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.dvgListaDoble = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpDatos = new System.Windows.Forms.GroupBox();
             this.rdbAscendentes = new System.Windows.Forms.RadioButton();
             this.rdbDescendentes = new System.Windows.Forms.RadioButton();
+            this.cmbCodigo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcb1)).BeginInit();
             this.grbEliminar.SuspendLayout();
             this.grbNuevo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgListaDoble)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.grpDatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // lstListaDoble
@@ -73,7 +73,7 @@ namespace pryEDAybarM
             // 
             // grbEliminar
             // 
-            this.grbEliminar.Controls.Add(this.lstCodigo);
+            this.grbEliminar.Controls.Add(this.cmbCodigo);
             this.grbEliminar.Controls.Add(this.btnEliminar);
             this.grbEliminar.Controls.Add(this.lblCodigo2);
             this.grbEliminar.Location = new System.Drawing.Point(674, 23);
@@ -82,14 +82,6 @@ namespace pryEDAybarM
             this.grbEliminar.TabIndex = 16;
             this.grbEliminar.TabStop = false;
             this.grbEliminar.Text = "Elemento A Eliminar:";
-            // 
-            // lstCodigo
-            // 
-            this.lstCodigo.FormattingEnabled = true;
-            this.lstCodigo.Location = new System.Drawing.Point(76, 34);
-            this.lstCodigo.Name = "lstCodigo";
-            this.lstCodigo.Size = new System.Drawing.Size(118, 30);
-            this.lstCodigo.TabIndex = 7;
             // 
             // btnEliminar
             // 
@@ -191,17 +183,17 @@ namespace pryEDAybarM
             this.dvgListaDoble.Size = new System.Drawing.Size(406, 217);
             this.dvgListaDoble.TabIndex = 14;
             // 
-            // groupBox1
+            // grpDatos
             // 
-            this.groupBox1.Controls.Add(this.rdbAscendentes);
-            this.groupBox1.Controls.Add(this.rdbDescendentes);
-            this.groupBox1.Location = new System.Drawing.Point(674, 148);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 93);
-            this.groupBox1.TabIndex = 17;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Listar Datos";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.grpDatos.Controls.Add(this.rdbAscendentes);
+            this.grpDatos.Controls.Add(this.rdbDescendentes);
+            this.grpDatos.Location = new System.Drawing.Point(674, 148);
+            this.grpDatos.Name = "grpDatos";
+            this.grpDatos.Size = new System.Drawing.Size(200, 93);
+            this.grpDatos.TabIndex = 17;
+            this.grpDatos.TabStop = false;
+            this.grpDatos.Text = "Listar Datos";
+            this.grpDatos.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // rdbAscendentes
             // 
@@ -225,12 +217,20 @@ namespace pryEDAybarM
             this.rdbDescendentes.Text = "Descendentes";
             this.rdbDescendentes.UseVisualStyleBackColor = true;
             // 
+            // cmbCodigo
+            // 
+            this.cmbCodigo.FormattingEnabled = true;
+            this.cmbCodigo.Location = new System.Drawing.Point(55, 31);
+            this.cmbCodigo.Name = "cmbCodigo";
+            this.cmbCodigo.Size = new System.Drawing.Size(139, 21);
+            this.cmbCodigo.TabIndex = 7;
+            // 
             // frmListaDoble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 512);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpDatos);
             this.Controls.Add(this.lstListaDoble);
             this.Controls.Add(this.pcb1);
             this.Controls.Add(this.grbEliminar);
@@ -246,8 +246,8 @@ namespace pryEDAybarM
             this.grbNuevo.ResumeLayout(false);
             this.grbNuevo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgListaDoble)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpDatos.ResumeLayout(false);
+            this.grpDatos.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -267,10 +267,10 @@ namespace pryEDAybarM
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.DataGridView dvgListaDoble;
-        private System.Windows.Forms.ListBox lstCodigo;
         private System.Windows.Forms.Label lblCodigo2;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpDatos;
         private System.Windows.Forms.RadioButton rdbAscendentes;
         private System.Windows.Forms.RadioButton rdbDescendentes;
+        private System.Windows.Forms.ComboBox cmbCodigo;
     }
 }

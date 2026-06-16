@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,49 +16,60 @@ namespace pryEDAybarM
         {
             InitializeComponent();
         }
+
         private void btnProyeccionSimple_Click(object sender, EventArgs e)
         {
-            new clsConexion().Listar(dgvResultados, "SELECT Titulo FROM Libro");
+            new clsConexion().Listar(dgvResultados,
+                "SELECT Nombre FROM Pais");
         }
 
         private void btnProyeccionMultiatributo_Click(object sender, EventArgs e)
         {
-            new clsConexion().Listar(dgvResultados, "SELECT Titulo, Autor, Precio FROM Libro");
+            new clsConexion().Listar(dgvResultados,
+                "SELECT IdPais, Nombre FROM Pais");
         }
 
         private void btnJuntar_Click(object sender, EventArgs e)
         {
-            new clsConexion().Listar(dgvResultados, "SELECT * FROM Libro INNER JOIN Autor ON Libro.IdAutor = Autor.Id");
+            new clsConexion().Listar(dgvResultados,
+                "SELECT Libro.*, Pais.Nombre AS NombrePais " +
+                "FROM Libro INNER JOIN Pais ON Libro.IdPais = Pais.IdPais");
         }
 
         private void btnSeleccionSimple_Click(object sender, EventArgs e)
         {
-            new clsConexion().Listar(dgvResultados, "SELECT * FROM Libro WHERE Precio > 100");
+            new clsConexion().Listar(dgvResultados,
+                "SELECT * FROM Idioma WHERE IdIdioma = 1");
         }
 
         private void btnSeleccionMultiatributo_Click(object sender, EventArgs e)
         {
-            new clsConexion().Listar(dgvResultados, "SELECT * FROM Libro WHERE Precio > 100 AND IdAutor = 1");
+            new clsConexion().Listar(dgvResultados,
+                "SELECT * FROM Pais WHERE IdPais > 1 AND Nombre LIKE '%U%'");
         }
 
         private void btnSeleccionConvolucion_Click(object sender, EventArgs e)
         {
-            new clsConexion().Listar(dgvResultados, "SELECT * FROM Libro WHERE Titulo LIKE '%A%'");
+            new clsConexion().Listar(dgvResultados,
+                "SELECT * FROM Pais WHERE Nombre LIKE 'R%'");
         }
 
         private void btnUnion_Click(object sender, EventArgs e)
         {
-            new clsConexion().Listar(dgvResultados, "SELECT Nombre FROM Autor UNION SELECT Nombre FROM Editoriales");
+            new clsConexion().Listar(dgvResultados,
+                "SELECT Nombre FROM Pais UNION SELECT Nombre FROM Idioma");
         }
 
         private void btnInterseccion_Click(object sender, EventArgs e)
         {
-            new clsConexion().Listar(dgvResultados, "SELECT Nombre FROM Autor WHERE Nombre IN (SELECT Nombre FROM Clientes)");
+            new clsConexion().Listar(dgvResultados,
+                "SELECT Nombre FROM Pais WHERE Nombre IN (SELECT Nombre FROM Idioma)");
         }
 
         private void btnDiferencia_Click(object sender, EventArgs e)
         {
-            new clsConexion().Listar(dgvResultados, "SELECT Nombre FROM Autor WHERE Nombre NOT IN (SELECT Nombre FROM Clientes)");
+            new clsConexion().Listar(dgvResultados,
+                "SELECT Nombre FROM Pais WHERE Nombre NOT IN (SELECT Nombre FROM Idioma)");
         }
     }
 }

@@ -25,7 +25,6 @@ namespace pryEDAybarM
         {
             return Precio[f, c];
 
-
         }
         public void BorrarTodo()
         {
@@ -91,7 +90,6 @@ namespace pryEDAybarM
                     Grilla.Rows[f].Cells[c + 1].Value = Precio[f, c];
                 }
             }
-
 
         }
         public void MostrarCiudades(ComboBox cmb)

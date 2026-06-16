@@ -23,7 +23,6 @@ namespace pryEDAybarM
 
         private void InicializarForm()
         {
-            // Llenar los ComboBox con las ciudades
             grafo.MostrarCiudades(cmbCargaOrigen);
             grafo.MostrarCiudades(cmbCargaDestino);
             grafo.MostrarCiudades(cmbConsultaOrigen);
@@ -34,8 +33,6 @@ namespace pryEDAybarM
 
         private void pnlGrafo_Paint(object sender, PaintEventArgs e)
         {
-            // Draw a simple graph visualization
-            // This is a placeholder for the actual graph drawing logic
         }
 
         private void btnCargar_Click(object sender, EventArgs e)
@@ -61,7 +58,6 @@ namespace pryEDAybarM
             int origen = cmbCargaOrigen.SelectedIndex;
             int destino = cmbCargaDestino.SelectedIndex;
 
-            // Agregar al grafo usando el método Agregar de clsGrafo
             grafo.Agregar(origen, destino, precio);
 
             MessageBox.Show($"Viaje cargado: {cmbCargaOrigen.SelectedItem} → {cmbCargaDestino.SelectedItem}: ${precio}");
